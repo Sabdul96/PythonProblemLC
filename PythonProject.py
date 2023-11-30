@@ -22,3 +22,19 @@ def can_Construct():
     
 #Step 4 : 
 
+class Solution:
+    def canConstruct(ransomNote: str, magazine: str) -> bool:
+    # Create a dictionary to store the counts of each letter in the magazine
+        magazine_counts = {}
+    for letter in magazine:
+        if letter not in magazine_counts:
+            magazine_counts[letter] = 0
+        magazine_counts[letter] += 1
+
+    # Iterate through the ransom note and decrement the counts of corresponding letters in the magazine
+    for letter in ransomNote:
+        if letter not in magazine_counts or magazine_counts[letter] <= 0:
+            return False
+        magazine_counts[letter] -= 1
+
+  
