@@ -13,4 +13,12 @@ def can_Construct():
 
 
     assert can_Construct(string1) == expect 
+
+#Step 3: 
+// Create strings 
+// indentify if string1 can be constucted from string2 
+// create a test 
+// return boolean results
     
+#Step 4 : 
+
